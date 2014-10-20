@@ -1,9 +1,9 @@
 Zend-Project-Starter
 ====================
 
-Bash script to create Zend project easily.<br>
+Bash script to create Zend Framework project easily.<br>
 <br>
-Create a Zend project based on Skeleton Application.<br>
+Create a Zend Framework project based on Skeleton Application.<br>
 Usage: sh zps.sh create PROJECT_DIR_NAME<br>
 What zps do:<br>
 1. Downloads composer.phar or update if found.<br>
