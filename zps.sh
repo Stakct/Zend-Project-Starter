@@ -40,5 +40,12 @@ elif [ $1 = "module-list" ]
 then
   php zftool.phar modules
 else
-  echo "Welcome to Zend Project Starter v0.1\nI'm here to help you to create a zen project with composer!\n\nUsage: sh zps.sh create DIRNAME\n\nHave fun! - Salvatore Tarda";
+  echo "Welcome to Zend Project Starter v0.1\n
+I'm here to help you to create a zen project with composer!\n
+\n
+Create project - Usage: sh zps.sh create DIRNAME\n
+\n
+Module list - Usage(inside project folder): sh zps.sh module-list\n
+\n
+Have fun! - Salvatore Tarda";
 fi
