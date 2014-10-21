@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -z "$1" ]
+then
+  echo "Welcome to Zend Project Starter v0.1\nI'm here to help you to create a zen project with composer!\n\nCreate project - Usage: sh zps.sh create DIRNAME\n\nModule list - Usage(inside project folder): sh zps.sh module-list\n\nHave fun! - Salvatore Tarda";
+  exit 0
+fi
+
 #Check if composer.phar exists and then update before to go.
 if [ ! -f composer.phar ]
 then
