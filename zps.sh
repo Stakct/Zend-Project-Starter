@@ -21,7 +21,24 @@ then
   cd $2
   php composer.phar self-update
   php composer.phar install
-  echo "Well done! - Everything is installed and up-to-date, go to public/ and execute php -S localhost:8888 to test your project.";
+
+  #Check if zftool.phar exists and then update before to go.
+  if [ ! -f vendor/bin/zf.php ]
+  then
+    php composer.phar require zendframework/zftool:dev-master
+  fi
+
+  if [ ! -f zftool.phar ]
+  then
+    wget http://packages.zendframework.com/zftool.phar
+  fi
+
+  cp zps.sh test/zps.sh
+
+  echo "Well done! - Everything is installed and up-to-date, go to public/ and execute php -S localhost:8888 to test your project.\nYou can now use zps.sh inside your project folder.";
+elif [ $1 = "module-list" ]
+then
+  php zftool.phar modules
 else
   echo "Welcome to Zend Project Starter v0.1\nI'm here to help you to create a zen project with composer!\n\nUsage: sh zps.sh create DIRNAME\n\nHave fun! - Salvatore Tarda";
 fi
